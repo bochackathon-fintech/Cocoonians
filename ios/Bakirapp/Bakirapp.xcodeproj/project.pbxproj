@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					5808751B1EEBE4CA008FFDBE = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = SKXQ5B9EV4;
+						DevelopmentTeam = 2C8CQ47QGC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -363,9 +363,9 @@
 			baseConfigurationReference = 26F7F49255DDE80AAF69550F /* Pods-Bakirapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SKXQ5B9EV4;
+				DEVELOPMENT_TEAM = 2C8CQ47QGC;
 				INFOPLIST_FILE = Bakirapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoonians.Bakirapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,9 +378,9 @@
 			baseConfigurationReference = AA52689EAEDA9F2B0C27BAD5 /* Pods-Bakirapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SKXQ5B9EV4;
+				DEVELOPMENT_TEAM = 2C8CQ47QGC;
 				INFOPLIST_FILE = Bakirapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoonians.Bakirapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

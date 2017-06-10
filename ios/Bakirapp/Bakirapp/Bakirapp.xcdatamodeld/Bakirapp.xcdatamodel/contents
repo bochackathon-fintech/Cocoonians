@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13154.26" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccountCategory" representedClassName="AccountCategory" syncable="YES" codeGenerationType="class"/>
+    <entity name="Currency" representedClassName="Currency" syncable="YES" codeGenerationType="class"/>
+    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class"/>
+    <entity name="SnapShot" representedClassName="SnapShot" syncable="YES" codeGenerationType="class"/>
+    <elements>
+        <element name="Customer" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="Currency" positionX="-261" positionY="-189" width="128" height="45"/>
+        <element name="AccountCategory" positionX="-261" positionY="-45" width="128" height="45"/>
+        <element name="SnapShot" positionX="-63" positionY="-189" width="128" height="45"/>
+    </elements>
 </model>
