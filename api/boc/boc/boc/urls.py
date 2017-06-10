@@ -22,6 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/api-token-auth/', views.obtain_auth_token)
+    url(r'^api/api-token-auth/', views.obtain_auth_token),
+    url(r'^api/', include('transactions.urls')),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

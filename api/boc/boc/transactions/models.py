@@ -1,9 +1,14 @@
 from django.db import models
 from django.conf import settings
+from datetime import date
+
+from dateutil.relativedelta import *
+from django.db.models import Sum
+from .date_utils import get_first_day_of_month, get_last_day_of_month, get_today_start, get_today_end
 
 
 class Customer(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='profile')
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='customer')
 
     created_date = models.DateField(u'Date created', auto_now_add=True, db_index=True)
     last_update = models.DateTimeField(auto_now=True, db_index=True)
@@ -84,13 +89,28 @@ class Account(models.Model):
     def __str__(self):
         return self.name
 
+    def current_month_snapshots(self):
+        year = date.today().year
+        month = date.today().month
+
+        month_start = get_first_day_of_month(year, month)
+        month_end = get_last_day_of_month(year, month)
+
+        return AccountSnapshot.objects.filter(account=self, date__gte=month_start, date__lte=month_end)
+
     def balance(self):
-        #TODO
-        return 0
+        start_date = get_today_start()
+        end_date = get_today_end()
+        try:
+            yesterday_snapshot = AccountSnapshot.objects.get(date=date.today()+relativedelta(days=-1)).balance
+
+            return yesterday_snapshot + Transaction.objects.filter(account=self, transaction_date__gte=start_date, transaction_date__lte=end_date).aggregate(Sum('amount'))["amount__sum"]
+        except Exception:
+            return 0
 
 
 class AccountSnapshot(models.Model):
-    account = models.ForeignKey(Account)
+    account = models.ForeignKey(Account, related_name="daily_snapshots")
     date = models.DateField()
     balance = models.DecimalField(decimal_places=2, max_digits=10)
 
