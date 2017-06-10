@@ -62,6 +62,16 @@ extension Account {
                                 let account = Account.create(context: ContextManager.shared.privateContext, acount_number: acount_number, balance: balance, category: category, currency: currency, name: name, opening_date: opening_date, overdraft_limit: overdraft_limit, owner: owner){
                                 
                                 accounts.append(account)
+                                
+                                if let daily_snapshots_data = result["daily_snapshots"] as? [[String:Any]]{
+                                    for daily_snapshot_data in daily_snapshots_data{
+                                        if let balance_str = daily_snapshot_data["balance"] as? String,
+                                            let balance = Float(balance_str),
+                                            let date = (daily_snapshot_data["date"] as? String)?.toDate{
+                                            SnapShot.create(context: ContextManager.shared.privateContext, account: account, balance: balance, date: date)
+                                        }
+                                    }
+                                }
                             }
                         }
                         completion(true, accounts)

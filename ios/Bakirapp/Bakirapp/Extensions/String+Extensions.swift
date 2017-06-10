@@ -38,6 +38,12 @@ extension String {
             return date
         }
         
+        //2017-06-01
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if let date =  dateFormatter.date(from: self) {
+            return date
+        }
+        
         dateFormatter.dateFormat = "dd, MMM yyyy"
         if let date =  dateFormatter.date(from: self) {
             return date
