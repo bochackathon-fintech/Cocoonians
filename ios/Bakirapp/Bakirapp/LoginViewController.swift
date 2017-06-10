@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftKeychainWrapper
+import LocalAuthentication
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -30,6 +31,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNotifications()
+    }
+    
+    deinit {
+        self.removeNotifications()
+    }
+
+    private func configureNotifications()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.showFingerprintIfNeeded), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+    }
+    
+    private func removeNotifications()
+    {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -69,6 +85,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     {
         self.usernameTextField.text = "u45653"
         self.passwordTextField.text = "qwerty123"
+    }
+    
+    func showFingerprintIfNeeded()
+    {
+        print("show fingerprint if needed")
+        if UserDefaults.hasToken
+        {
+            let context = LAContext()
+            var error: NSError?
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+            {
+                let localizedReasonString = NSLocalizedString("Session expired. Fingerprint authentication required", comment: "Session expired. Fingerprint authentication required")
+                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonString, reply: { (success, error) in
+                    print("success \(success)")
+                })
+            }
+        }
+
     }
     
     /*
