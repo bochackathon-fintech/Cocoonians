@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39D4E94D1EEC535000F6B900 /* Customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9431EEC535000F6B900 /* Customer+CoreDataClass.swift */; };
+		39D4E94E1EEC535000F6B900 /* Customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9441EEC535000F6B900 /* Customer+CoreDataProperties.swift */; };
+		39D4E94F1EEC535000F6B900 /* Currency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9451EEC535000F6B900 /* Currency+CoreDataClass.swift */; };
+		39D4E9501EEC535000F6B900 /* Currency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9461EEC535000F6B900 /* Currency+CoreDataProperties.swift */; };
+		39D4E9511EEC535000F6B900 /* SnapShot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9471EEC535000F6B900 /* SnapShot+CoreDataClass.swift */; };
+		39D4E9521EEC535000F6B900 /* SnapShot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9481EEC535000F6B900 /* SnapShot+CoreDataProperties.swift */; };
+		39D4E9531EEC535000F6B900 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9491EEC535000F6B900 /* Account+CoreDataClass.swift */; };
+		39D4E9541EEC535000F6B900 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E94A1EEC535000F6B900 /* Account+CoreDataProperties.swift */; };
+		39D4E9551EEC535000F6B900 /* AccountCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E94B1EEC535000F6B900 /* AccountCategory+CoreDataClass.swift */; };
+		39D4E9561EEC535000F6B900 /* AccountCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E94C1EEC535000F6B900 /* AccountCategory+CoreDataProperties.swift */; };
+		39D4E9581EEC562000F6B900 /* Account+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9571EEC562000F6B900 /* Account+Parse.swift */; };
+		39D4E95D1EEC5A2300F6B900 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9591EEC5A2300F6B900 /* Transaction+CoreDataClass.swift */; };
+		39D4E95E1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E95A1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift */; };
+		39D4E95F1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E95B1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift */; };
+		39D4E9601EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E95C1EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift */; };
 		580875201EEBE4CA008FFDBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */; };
 		580875221EEBE4CA008FFDBE /* BakiraTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */; };
 		580875251EEBE4CA008FFDBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580875231EEBE4CA008FFDBE /* Main.storyboard */; };
@@ -22,6 +37,21 @@
 
 /* Begin PBXFileReference section */
 		26F7F49255DDE80AAF69550F /* Pods-Bakirapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bakirapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bakirapp/Pods-Bakirapp.debug.xcconfig"; sourceTree = "<group>"; };
+		39D4E9431EEC535000F6B900 /* Customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		39D4E9441EEC535000F6B900 /* Customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39D4E9451EEC535000F6B900 /* Currency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass.swift"; sourceTree = "<group>"; };
+		39D4E9461EEC535000F6B900 /* Currency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39D4E9471EEC535000F6B900 /* SnapShot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapShot+CoreDataClass.swift"; sourceTree = "<group>"; };
+		39D4E9481EEC535000F6B900 /* SnapShot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapShot+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39D4E9491EEC535000F6B900 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		39D4E94A1EEC535000F6B900 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39D4E94B1EEC535000F6B900 /* AccountCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		39D4E94C1EEC535000F6B900 /* AccountCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39D4E9571EEC562000F6B900 /* Account+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+Parse.swift"; sourceTree = "<group>"; };
+		39D4E9591EEC5A2300F6B900 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		39D4E95A1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39D4E95B1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		39D4E95C1EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5808751C1EEBE4CA008FFDBE /* Bakirapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bakirapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakiraTabBarController.swift; sourceTree = "<group>"; };
@@ -58,6 +88,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		39D4E9421EEC533000F6B900 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39D4E9591EEC5A2300F6B900 /* Transaction+CoreDataClass.swift */,
+				39D4E95A1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift */,
+				39D4E95B1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift */,
+				39D4E95C1EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift */,
+				39D4E9431EEC535000F6B900 /* Customer+CoreDataClass.swift */,
+				39D4E9441EEC535000F6B900 /* Customer+CoreDataProperties.swift */,
+				39D4E9451EEC535000F6B900 /* Currency+CoreDataClass.swift */,
+				39D4E9461EEC535000F6B900 /* Currency+CoreDataProperties.swift */,
+				39D4E9471EEC535000F6B900 /* SnapShot+CoreDataClass.swift */,
+				39D4E9481EEC535000F6B900 /* SnapShot+CoreDataProperties.swift */,
+				39D4E9491EEC535000F6B900 /* Account+CoreDataClass.swift */,
+				39D4E94A1EEC535000F6B900 /* Account+CoreDataProperties.swift */,
+				39D4E9571EEC562000F6B900 /* Account+Parse.swift */,
+				39D4E94B1EEC535000F6B900 /* AccountCategory+CoreDataClass.swift */,
+				39D4E94C1EEC535000F6B900 /* AccountCategory+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		580875131EEBE4CA008FFDBE = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +131,7 @@
 		5808751E1EEBE4CA008FFDBE /* Bakirapp */ = {
 			isa = PBXGroup;
 			children = (
+				39D4E9421EEC533000F6B900 /* Models */,
 				58FCEF571EEC107D00EF676D /* Constants */,
 				5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */,
 				580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */,
@@ -146,7 +199,7 @@
 				TargetAttributes = {
 					5808751B1EEBE4CA008FFDBE = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = SKXQ5B9EV4;
+						DevelopmentTeam = 2C8CQ47QGC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -235,12 +288,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D4E95E1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift in Sources */,
 				580875351EEBE89D008FFDBE /* LoginViewController.swift in Sources */,
 				58FCEF591EEC174300EF676D /* UserDefault.swift in Sources */,
+				39D4E94E1EEC535000F6B900 /* Customer+CoreDataProperties.swift in Sources */,
+				39D4E9521EEC535000F6B900 /* SnapShot+CoreDataProperties.swift in Sources */,
 				580875281EEBE4CA008FFDBE /* Bakirapp.xcdatamodeld in Sources */,
+				39D4E9551EEC535000F6B900 /* AccountCategory+CoreDataClass.swift in Sources */,
 				58FCEF561EEC107900EF676D /* Keys.swift in Sources */,
 				58FCEF541EEBFD8C00EF676D /* Feeds.swift in Sources */,
+				39D4E94D1EEC535000F6B900 /* Customer+CoreDataClass.swift in Sources */,
+				39D4E95D1EEC5A2300F6B900 /* Transaction+CoreDataClass.swift in Sources */,
+				39D4E9511EEC535000F6B900 /* SnapShot+CoreDataClass.swift in Sources */,
+				39D4E9531EEC535000F6B900 /* Account+CoreDataClass.swift in Sources */,
+				39D4E95F1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift in Sources */,
+				39D4E9581EEC562000F6B900 /* Account+Parse.swift in Sources */,
+				39D4E9501EEC535000F6B900 /* Currency+CoreDataProperties.swift in Sources */,
 				580875221EEBE4CA008FFDBE /* BakiraTabBarController.swift in Sources */,
+				39D4E9541EEC535000F6B900 /* Account+CoreDataProperties.swift in Sources */,
+				39D4E94F1EEC535000F6B900 /* Currency+CoreDataClass.swift in Sources */,
+				39D4E9561EEC535000F6B900 /* AccountCategory+CoreDataProperties.swift in Sources */,
+				39D4E9601EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift in Sources */,
 				580875201EEBE4CA008FFDBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +431,7 @@
 			baseConfigurationReference = 26F7F49255DDE80AAF69550F /* Pods-Bakirapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SKXQ5B9EV4;
+				DEVELOPMENT_TEAM = 2C8CQ47QGC;
 				INFOPLIST_FILE = Bakirapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -378,7 +446,7 @@
 			baseConfigurationReference = AA52689EAEDA9F2B0C27BAD5 /* Pods-Bakirapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SKXQ5B9EV4;
+				DEVELOPMENT_TEAM = 2C8CQ47QGC;
 				INFOPLIST_FILE = Bakirapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
