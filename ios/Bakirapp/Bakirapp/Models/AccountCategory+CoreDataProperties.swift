@@ -17,8 +17,8 @@ extension AccountCategory {
         return NSFetchRequest<AccountCategory>(entityName: "AccountCategory")
     }
 
-    @NSManaged public var code: String?
-    @NSManaged public var name: String?
+    @NSManaged public var code: String
+    @NSManaged public var name: String
     @NSManaged public var accounts: NSSet?
 
 }

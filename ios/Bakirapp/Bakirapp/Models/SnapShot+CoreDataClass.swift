@@ -12,5 +12,6 @@ import CoreData
 
 @objc(SnapShot)
 public class SnapShot: NSManagedObject {
-
+    
+    
 }

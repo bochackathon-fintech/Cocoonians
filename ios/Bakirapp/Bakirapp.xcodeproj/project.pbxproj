@@ -22,6 +22,8 @@
 		39D4E95E1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E95A1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift */; };
 		39D4E95F1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E95B1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift */; };
 		39D4E9601EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E95C1EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift */; };
+		39D4E9621EEC5DD500F6B900 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9611EEC5DD500F6B900 /* DashboardViewController.swift */; };
+		39D4E9641EEC6BFF00F6B900 /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9631EEC6BFF00F6B900 /* ContextManager.swift */; };
 		580875201EEBE4CA008FFDBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */; };
 		580875221EEBE4CA008FFDBE /* BakiraTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */; };
 		580875251EEBE4CA008FFDBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580875231EEBE4CA008FFDBE /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		39D4E95A1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		39D4E95B1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionType+CoreDataClass.swift"; sourceTree = "<group>"; };
 		39D4E95C1EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		39D4E9611EEC5DD500F6B900 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		39D4E9631EEC6BFF00F6B900 /* ContextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
 		5808751C1EEBE4CA008FFDBE /* Bakirapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bakirapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakiraTabBarController.swift; sourceTree = "<group>"; };
@@ -144,11 +148,13 @@
 				580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */,
 				580875341EEBE89D008FFDBE /* LoginViewController.swift */,
 				5834E1D91EEC6D0B0085E207 /* PromotionsViewController.swift */,
+				39D4E9611EEC5DD500F6B900 /* DashboardViewController.swift */,
 				580875231EEBE4CA008FFDBE /* Main.storyboard */,
 				580875291EEBE4CA008FFDBE /* Assets.xcassets */,
 				5808752B1EEBE4CA008FFDBE /* LaunchScreen.storyboard */,
 				5808752E1EEBE4CA008FFDBE /* Info.plist */,
 				580875261EEBE4CA008FFDBE /* Bakirapp.xcdatamodeld */,
+				39D4E9631EEC6BFF00F6B900 /* ContextManager.swift */,
 			);
 			path = Bakirapp;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39D4E95E1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift in Sources */,
+				39D4E9621EEC5DD500F6B900 /* DashboardViewController.swift in Sources */,
 				580875351EEBE89D008FFDBE /* LoginViewController.swift in Sources */,
 				58FCEF591EEC174300EF676D /* UserDefault.swift in Sources */,
 				39D4E94E1EEC535000F6B900 /* Customer+CoreDataProperties.swift in Sources */,
@@ -320,6 +327,7 @@
 				39D4E9511EEC535000F6B900 /* SnapShot+CoreDataClass.swift in Sources */,
 				39D4E9531EEC535000F6B900 /* Account+CoreDataClass.swift in Sources */,
 				39D4E95F1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift in Sources */,
+				39D4E9641EEC6BFF00F6B900 /* ContextManager.swift in Sources */,
 				39D4E9581EEC562000F6B900 /* Account+Parse.swift in Sources */,
 				5834E1D71EEC69680085E207 /* TransactionTableViewCell.swift in Sources */,
 				39D4E9501EEC535000F6B900 /* Currency+CoreDataProperties.swift in Sources */,
