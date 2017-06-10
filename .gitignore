@@ -16,6 +16,7 @@ DerivedData
 .idea/
 # Pods - for those of you who use CocoaPods
 Pods
+Podfile.lock
 
 #django
 venv
