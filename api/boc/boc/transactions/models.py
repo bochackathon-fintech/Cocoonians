@@ -37,8 +37,8 @@ class Merchant(models.Model):
     type = models.ForeignKey(MerchantType)
     name = models.CharField(max_length=300)
     merchant_id = models.CharField(max_length=100, db_index=True, unique=True)
-    longitute = models.DecimalField(max_digits=10, decimal_places=5)
-    latitude = models.DecimalField(max_digits=10, decimal_places=5)
+    longitute = models.DecimalField(max_digits=10, decimal_places=6)
+    latitude = models.DecimalField(max_digits=10, decimal_places=6)
 
     def __str__(self):
         return self.name
