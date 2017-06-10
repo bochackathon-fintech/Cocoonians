@@ -18,7 +18,7 @@ public class SnapShot: NSManagedObject {
     class func create(context:NSManagedObjectContext,account:Account, balance:Float, date:Date) -> SnapShot? {
         let className = SnapShot.className
         
-        let request = NSFetchRequest<Currency>(entityName: className)
+        let request = NSFetchRequest<SnapShot>(entityName: className)
         request.predicate = NSPredicate(format: "date = %@", date as NSDate)
         
         do {

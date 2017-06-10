@@ -19,7 +19,7 @@ public class Currency: NSManagedObject {
         let className = Currency.className
         
         let request = NSFetchRequest<Currency>(entityName: className)
-        request.predicate = NSPredicate(format: "code = %s", code)
+        request.predicate = NSPredicate(format: "code = %@", code)
         
         do {
             let object = (try context.fetch(request).last ??

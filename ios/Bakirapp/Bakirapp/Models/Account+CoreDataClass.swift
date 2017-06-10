@@ -19,7 +19,7 @@ public class Account: NSManagedObject {
         let className = Account.className
         
         let request = NSFetchRequest<Account>(entityName: className)
-        request.predicate = NSPredicate(format: "account_number = %s", acount_number)
+        request.predicate = NSPredicate(format: "account_number = %@", acount_number)
         
         do {
             let object = (try context.fetch(request).last ??

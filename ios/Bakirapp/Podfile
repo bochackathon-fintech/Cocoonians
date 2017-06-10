@@ -8,4 +8,6 @@ target 'Bakirapp' do
   # Pods for Bakirapp
   pod 'Alamofire', '~>4.4.0'
   pod 'SwiftKeychainWrapper', '~>3.0.1'
+  pod 'Charts', '~> 3.0.2'
+  
 end

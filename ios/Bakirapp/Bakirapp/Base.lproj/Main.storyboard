@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -216,13 +217,28 @@
                     <view key="view" contentMode="scaleToFill" id="9Yg-7t-Lkj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7j-LW-w9o" customClass="LineChartView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a7j-LW-w9o" firstAttribute="leading" secondItem="9Yg-7t-Lkj" secondAttribute="leading" id="7fB-Dr-2hq"/>
+                            <constraint firstAttribute="trailing" secondItem="a7j-LW-w9o" secondAttribute="trailing" id="o7c-oJ-8Nj"/>
+                            <constraint firstItem="a7j-LW-w9o" firstAttribute="top" secondItem="9Yg-7t-Lkj" secondAttribute="top" id="vqY-zD-7xY"/>
+                            <constraint firstItem="a7j-LW-w9o" firstAttribute="height" secondItem="9Yg-7t-Lkj" secondAttribute="height" multiplier="1/2" id="z12-gI-SgR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard_tab" id="Lky-RL-oMa"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="a7j-LW-w9o" id="dwo-Wf-2B8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZj-83-659" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657" y="-200"/>
+            <point key="canvasLocation" x="2656.8000000000002" y="-200.14992503748127"/>
         </scene>
         <!--Bakira Tab Bar Controller-->
         <scene sceneID="nir-hN-7Ez">
