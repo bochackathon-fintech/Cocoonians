@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftKeychainWrapper
 
 struct Feeds
 {
@@ -15,4 +17,19 @@ struct Feeds
     
     static let accounts = Feeds.baseUrl + "/api/my/accounts/"
     
+    //TODO: To be changed.
+    static let transactions = Feeds.baseUrl + "/api/my/transactions?account_id=1&start_date=01-01-2017&end_date=30-06-2017"
+    
+    
+    static var headers: HTTPHeaders? {
+        guard let token = KeychainWrapper.standard.string(forKey: Keys.token) else {
+            return nil
+        }
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Token \(token)",
+            "Accept": "application/json"
+        ]
+        return headers
+    }
 }

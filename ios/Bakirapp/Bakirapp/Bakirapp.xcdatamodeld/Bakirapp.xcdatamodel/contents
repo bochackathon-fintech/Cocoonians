@@ -39,6 +39,7 @@
         <attribute name="descr" attributeType="String" syncable="YES"/>
         <attribute name="tags" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="transaction_date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="transaction_id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="account" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account" syncable="YES"/>
         <relationship name="type" maxCount="1" deletionRule="Nullify" destinationEntity="TransactionType" inverseName="transactions" inverseEntity="TransactionType" syncable="YES"/>
     </entity>
@@ -50,12 +51,12 @@
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="type" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Customer" positionX="187" positionY="-180" width="128" height="118"/>
-        <element name="Currency" positionX="-270" positionY="-315" width="128" height="88"/>
-        <element name="AccountCategory" positionX="-279" positionY="-133" width="128" height="88"/>
-        <element name="SnapShot" positionX="-11" positionY="-405" width="128" height="88"/>
         <element name="Account" positionX="-27" positionY="-250" width="128" height="193"/>
-        <element name="Transaction" positionX="171" positionY="-424" width="128" height="133"/>
+        <element name="AccountCategory" positionX="-279" positionY="-133" width="128" height="88"/>
+        <element name="Currency" positionX="-270" positionY="-315" width="128" height="88"/>
+        <element name="Customer" positionX="187" positionY="-180" width="128" height="118"/>
+        <element name="SnapShot" positionX="-11" positionY="-405" width="128" height="88"/>
+        <element name="Transaction" positionX="171" positionY="-424" width="128" height="150"/>
         <element name="TransactionType" positionX="169" positionY="-522" width="128" height="118"/>
     </elements>
 </model>

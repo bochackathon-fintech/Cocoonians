@@ -16,11 +16,12 @@ extension Transaction {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Transaction> {
         return NSFetchRequest<Transaction>(entityName: "Transaction")
     }
-
+    
+    @NSManaged public var transaction_id: Int
     @NSManaged public var amount: Float
-    @NSManaged public var transaction_date: NSDate?
+    @NSManaged public var transaction_date: NSDate
     @NSManaged public var tags: String?
-    @NSManaged public var descr: String?
+    @NSManaged public var descr: String
     @NSManaged public var account: Account?
     @NSManaged public var type: TransactionType?
 

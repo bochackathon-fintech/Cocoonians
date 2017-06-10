@@ -22,7 +22,7 @@ extension Account {
             Alamofire.request(Feeds.accounts, method: .get, headers: headers).responseJSON { (response) in
                 
                 ContextManager.shared.privateContext.perform {
-                    if let JSON = response.result.value as? [String : Any]{
+                    if let JSON = response.result.value as? [String : Any] {
                         guard let category_data = JSON["category"] as? [String:Any],
                             let cat_code = category_data["code"] as? String,
                             let cat_name = category_data["name"] as? String,
