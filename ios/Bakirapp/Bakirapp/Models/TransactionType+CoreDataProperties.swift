@@ -16,9 +16,10 @@ extension TransactionType {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<TransactionType> {
         return NSFetchRequest<TransactionType>(entityName: "TransactionType")
     }
-
-    @NSManaged public var code: String?
-    @NSManaged public var name: String?
+    
+    @NSManaged public var transaction_type_id: Int
+    @NSManaged public var code: String
+    @NSManaged public var name: String
     @NSManaged public var isDebit: Bool
     @NSManaged public var icon: String?
     @NSManaged public var transactions: NSSet?

@@ -12,31 +12,34 @@ import CoreData
 
 @objc(Transaction)
 public class Transaction: NSManagedObject {
-    
     static let className = "Transaction"
     
-    /**
-     @NSManaged public var amount: Float
-     @NSManaged public var transaction_date: NSDate
-     @NSManaged public var tags: String?
-     @NSManaged public var descr: String
-     @NSManaged public var account: Account?
-     @NSManaged public var type: TransactionType?
-     */
-    
     class func create(context: NSManagedObjectContext, json: [String : Any]) -> Transaction? {
-        guard let transactionId = json["transaction_id"] as? Int else {
+        guard let transactionId = json["id"] as? Int else {
             return nil
         }
-        
         let request = NSFetchRequest<Transaction>(entityName: Transaction.className)
         request.predicate = NSPredicate(format: "transaction_id = %d", transactionId)
         
         do {
+            guard let account_data = json["account"] as? [String : Any],
+                let accounNumber = account_data["acount_number"] as? String,
+                let account = Account.findAccount(context: context, accountNumber: accounNumber) else {
+//                self.account = account
+                    return nil
+            }
+            
+            guard let transaction_type = json["transaction_type"] as? [String : Any],
+                let trans_type = TransactionType.create(context: context, json: transaction_type) else {
+//                self.type = trans_type
+                    return nil
+            }
+            
             if let object = (try context.fetch(request).last ??
-                NSEntityDescription.insertNewObject(forEntityName: className, into: context)) as? Transaction
+                NSEntityDescription.insertNewObject(forEntityName: Transaction.className, into: context)) as? Transaction
             {
-                object.parse(json: json)
+                object.parse(json: json, transactionId: transactionId, account: account, transactionType: trans_type, context: context)
+                try context.save()
                 return object
             }
         }
@@ -47,8 +50,12 @@ public class Transaction: NSManagedObject {
         return nil
     }
     
-    func parse(json: [String : Any])
+    func parse(json: [String : Any], transactionId: Int, account: Account, transactionType: TransactionType, context: NSManagedObjectContext)
     {
+        self.transaction_id = transactionId
+        self.account = account
+        self.type = transactionType
+        
         if let amountStr = json["amount"] as? String,
             let amountFloat = Float(amountStr)
         {
@@ -60,7 +67,7 @@ public class Transaction: NSManagedObject {
         }
         
         if let transaction_date_str = json["transaction_date"] as? String,
-            let transaction_date = Date.getDateFromString("", dateString: transaction_date_str) {
+            let transaction_date = transaction_date_str.toDate {
             self.transaction_date = transaction_date as NSDate
         }
         

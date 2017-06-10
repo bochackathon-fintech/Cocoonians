@@ -20,6 +20,8 @@ class PromotionsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Transaction.fetchTransactions()
+
     }
 
     override func didReceiveMemoryWarning() {

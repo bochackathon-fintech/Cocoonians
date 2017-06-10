@@ -16,11 +16,18 @@ extension Transaction {
         guard let headers = Feeds.headers else {
             return
         }
-        
-        Alamofire.request(Feeds.accounts, method: .get, headers: headers).responseJSON { (response) in
+        print("headers \(headers)")
+        print("transactions \(Feeds.transactions)")
+        Alamofire.request(Feeds.transactions, method: .get, headers: headers).responseJSON { (response) in
             ContextManager.shared.privateContext.perform {
-                if let JSON = response.result.value as? [String : Any] {
-                    
+                if let JSON = response.result.value as? [String : Any],
+                let results = JSON["results"] as? [[String : Any]]
+                {
+                    _ = results.map({
+                        if let trans = Transaction.create(context: ContextManager.shared.privateContext, json: $0) {
+                            print("--> \(trans.descr)")
+                        }
+                    })
                 }
             }
         }
