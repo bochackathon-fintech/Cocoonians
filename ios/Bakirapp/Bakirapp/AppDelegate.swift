@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let dnc = NotificationCenter.default
+        let mainQueue = OperationQueue.main
+        dnc.addObserver(forName: NSNotification.Name.NSManagedObjectContextDidSave, object: self.privateObjectContext, queue: mainQueue, using: { (saveNotification) -> Void in
+            
+            self.saveContext()
+        })
+        
         return true
     }
 
@@ -47,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        //self.saveContext()
+        self.saveContext()
     }
 
     // MARK: - Core Data stack
@@ -78,7 +86,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-
+    
+    lazy var managedObjectContext: NSManagedObjectContext = {
+        // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
+        let coordinator = self.persistentContainer.persistentStoreCoordinator
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        
+        return managedObjectContext
+    }()
+    
+    
+    lazy var privateObjectContext: NSManagedObjectContext = { [unowned self] in
+        let coordinator = self.persistentContainer.persistentStoreCoordinator
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        managedObjectContext.parent = self.managedObjectContext
+        return managedObjectContext
+        }()
+    
+    
     // MARK: - Core Data Saving support
 
     func saveContext () {

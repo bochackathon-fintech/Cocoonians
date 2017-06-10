@@ -17,10 +17,10 @@ extension Customer {
         return NSFetchRequest<Customer>(entityName: "Customer")
     }
 
-    @NSManaged public var customer_number: String?
-    @NSManaged public var email: String?
-    @NSManaged public var first_name: String?
-    @NSManaged public var last_name: String?
+    @NSManaged public var customer_number: String
+    @NSManaged public var email: String
+    @NSManaged public var first_name: String
+    @NSManaged public var last_name: String
     @NSManaged public var accounts: Account?
 
 }

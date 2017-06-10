@@ -189,7 +189,7 @@
         <!--Dashboard-->
         <scene sceneID="Cpm-VW-MRo">
             <objects>
-                <viewController id="lfn-tt-Fkr" sceneMemberID="viewController">
+                <viewController id="lfn-tt-Fkr" customClass="DashboardViewController" customModule="Bakirapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vle-vU-mNT"/>
                         <viewControllerLayoutGuide type="bottom" id="8ov-bo-Gxo"/>
