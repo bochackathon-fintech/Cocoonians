@@ -18,12 +18,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var bocLogoImageView: UIImageView! {
+    @IBOutlet weak var bakiraLogoImageView: UIImageView! {
         didSet {
-            bocLogoImageView.isUserInteractionEnabled = true
+            bakiraLogoImageView.isUserInteractionEnabled = true
             let doubleTabGesture = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.bocLogoDoubleTouched))
             doubleTabGesture.numberOfTapsRequired = 2
-            bocLogoImageView.addGestureRecognizer(doubleTabGesture)
+            bakiraLogoImageView.addGestureRecognizer(doubleTabGesture)
         }
     }
     
@@ -32,6 +32,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNotifications()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     deinit {
@@ -50,7 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        loginButton.layer.cornerRadius = 4.0
+        loginButton.layer.cornerRadius = 10.0
     }
 
     
@@ -70,7 +75,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let params: [String : Any] = ["username" : usernameText, "password" : passwordText]
         Alamofire.request(Feeds.login, method: .post, parameters: params).responseJSON { (response) in
             print("response \(response.result)")
-            print("response value \(response.result.value)")
+            print("response value \(String(describing: response.result.value))")
 
             if let JSON = response.result.value as? [String : Any],
                 let token = JSON["token"] as? String
@@ -78,20 +83,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 KeychainWrapper.standard.set(token, forKey: Keys.token)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "BakiraTabBarController")
-
                 self.navigationController?.pushViewController(controller, animated: true)
-                
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let controller = storyboard.instantiateViewController(withIdentifier: "BakiraTabBarController")
-//                let navigationController = UINavigationController(rootViewController: controller)
-//                self.present(navigationController, animated: true, completion: {
-//                    DispatchQueue.main.async {
-//                        if let appDelegate = UIApplication.shared.delegate {
-//                            
-//                            appDelegate.window??.rootViewController = navigationController
-//                        }
-//                    }
-//                })
             }
         }
         
@@ -114,8 +106,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             {
                 let localizedReasonString = NSLocalizedString("Session expired. Fingerprint authentication required", comment: "Session expired. Fingerprint authentication required")
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonString, reply: { (success, error) in
-                    print("success \(success)")
+                    if success
+                    {
+                        DispatchQueue.main.async {
+                            print("success \(success)")
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let controller = storyboard.instantiateViewController(withIdentifier: "BakiraTabBarController")
+                            self.navigationController?.pushViewController(controller, animated: true)
+                        }
+                    }
+                    else
+                    {
+                        context.invalidate()
+                    }
                 })
+            }
+            else
+            {
+                print("error \(String(describing: error?.debugDescription))")
             }
         }
 
