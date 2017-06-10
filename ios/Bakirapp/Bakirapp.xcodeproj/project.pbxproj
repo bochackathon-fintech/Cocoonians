@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		580875201EEBE4CA008FFDBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */; };
-		580875221EEBE4CA008FFDBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580875211EEBE4CA008FFDBE /* ViewController.swift */; };
+		580875221EEBE4CA008FFDBE /* BakiraTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */; };
 		580875251EEBE4CA008FFDBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580875231EEBE4CA008FFDBE /* Main.storyboard */; };
 		580875281EEBE4CA008FFDBE /* Bakirapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 580875261EEBE4CA008FFDBE /* Bakirapp.xcdatamodeld */; };
 		5808752A1EEBE4CA008FFDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580875291EEBE4CA008FFDBE /* Assets.xcassets */; };
@@ -24,7 +24,7 @@
 		26F7F49255DDE80AAF69550F /* Pods-Bakirapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bakirapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bakirapp/Pods-Bakirapp.debug.xcconfig"; sourceTree = "<group>"; };
 		5808751C1EEBE4CA008FFDBE /* Bakirapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bakirapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		580875211EEBE4CA008FFDBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakiraTabBarController.swift; sourceTree = "<group>"; };
 		580875241EEBE4CA008FFDBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		580875271EEBE4CA008FFDBE /* Bakirapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bakirapp.xcdatamodel; sourceTree = "<group>"; };
 		580875291EEBE4CA008FFDBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				58FCEF571EEC107D00EF676D /* Constants */,
 				5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */,
-				580875211EEBE4CA008FFDBE /* ViewController.swift */,
+				580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */,
 				580875341EEBE89D008FFDBE /* LoginViewController.swift */,
 				580875231EEBE4CA008FFDBE /* Main.storyboard */,
 				580875291EEBE4CA008FFDBE /* Assets.xcassets */,
@@ -240,7 +240,7 @@
 				580875281EEBE4CA008FFDBE /* Bakirapp.xcdatamodeld in Sources */,
 				58FCEF561EEC107900EF676D /* Keys.swift in Sources */,
 				58FCEF541EEBFD8C00EF676D /* Feeds.swift in Sources */,
-				580875221EEBE4CA008FFDBE /* ViewController.swift in Sources */,
+				580875221EEBE4CA008FFDBE /* BakiraTabBarController.swift in Sources */,
 				580875201EEBE4CA008FFDBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

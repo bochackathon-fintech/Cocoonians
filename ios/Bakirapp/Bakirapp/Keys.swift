@@ -9,8 +9,5 @@
 import UIKit
 
 struct Keys {
-
     static let token = "token"
-    
-    
 }

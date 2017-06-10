@@ -75,7 +75,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if let JSON = response.result.value as? [String : Any],
                 let token = JSON["token"] as? String
             {
-                print("token: \(token) saved \(KeychainWrapper.standard.set(token, forKey: Keys.token))")
+                KeychainWrapper.standard.set(token, forKey: Keys.token)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "BakiraTabBarController")
+
+                self.navigationController?.pushViewController(controller, animated: true)
+                
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let controller = storyboard.instantiateViewController(withIdentifier: "BakiraTabBarController")
+//                let navigationController = UINavigationController(rootViewController: controller)
+//                self.present(navigationController, animated: true, completion: {
+//                    DispatchQueue.main.async {
+//                        if let appDelegate = UIApplication.shared.delegate {
+//                            
+//                            appDelegate.window??.rootViewController = navigationController
+//                        }
+//                    }
+//                })
             }
         }
         
