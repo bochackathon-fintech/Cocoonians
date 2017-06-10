@@ -124,7 +124,7 @@ class Transaction(models.Model):
     transaction_type = models.ForeignKey(TransactionType)
     merchant = models.ForeignKey(Merchant, null=True, blank=True)
     description = models.CharField(max_length=400)
-    transaction_date = models.DateTimeField()
+    transaction_date = models.DateTimeField(db_index=True)
     tags = models.CharField(max_length=400, null=True, blank=True)
 
     def __str__(self):

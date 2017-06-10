@@ -27,6 +27,15 @@ class AccountSnapshotSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class SimpleAccountSerializer(serializers.ModelSerializer):
+    balance = serializers.DecimalField(max_digits=10, decimal_places=2)
+    currency = CurrencySerializer()
+
+    class Meta:
+        model = Account
+        exclude = ['category']
+
+
 class AccountSerializer(serializers.ModelSerializer):
     daily_snapshots = AccountSnapshotSerializer(many=True, source='current_month_snapshots')
     balance = serializers.DecimalField(max_digits=10, decimal_places=2)
@@ -39,7 +48,30 @@ class AccountSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class TransactionTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TransactionType
+        fields = "__all__"
+
+
+class MerchantTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MerchantType
+        fields = "__all__"
+
+
+class MerchantSerializer(serializers.ModelSerializer):
+    type = MerchantTypeSerializer()
+
+    class Meta:
+        model = Merchant
+        fields = "__all__"
+
+
 class TransactionSerializer(serializers.ModelSerializer):
+    account = SimpleAccountSerializer()
+    transaction_type = TransactionTypeSerializer()
+    merchant = MerchantSerializer()
 
     class Meta:
         model = Transaction
