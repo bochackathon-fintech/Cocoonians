@@ -18,3 +18,15 @@ DerivedData
 .idea/
 # Pods - for those of you who use CocoaPods
 Pods
+
+#django
+venv
+*.pyc
+staticfiles
+.env
+secrets.json
+.idea/*
+media
+mdtm
+start-celery-worker
+dump.rdb
