@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13154.26" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="AccountCategory" representedClassName="AccountCategory" syncable="YES" codeGenerationType="class"/>
-    <entity name="Currency" representedClassName="Currency" syncable="YES" codeGenerationType="class"/>
-    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class"/>
-    <entity name="SnapShot" representedClassName="SnapShot" syncable="YES" codeGenerationType="class"/>
+    <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="class">
+        <attribute name="account_number" attributeType="String" syncable="YES"/>
+        <attribute name="balance" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="opening_date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="overdraft_limit" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="AccountCategory" inverseName="accounts" inverseEntity="AccountCategory" syncable="YES"/>
+        <relationship name="currency" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" inverseName="accounts" inverseEntity="Currency" syncable="YES"/>
+        <relationship name="customer" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="accounts" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="snapshots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SnapShot" inverseName="account" inverseEntity="SnapShot" syncable="YES"/>
+    </entity>
+    <entity name="AccountCategory" representedClassName="AccountCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="code" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account" inverseName="category" inverseEntity="Account" syncable="YES"/>
+    </entity>
+    <entity name="Currency" representedClassName="Currency" syncable="YES" codeGenerationType="class">
+        <attribute name="code" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account" inverseName="currency" inverseEntity="Account" syncable="YES"/>
+    </entity>
+    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+        <attribute name="customer_number" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <attribute name="first_name" attributeType="String" syncable="YES"/>
+        <attribute name="last_name" attributeType="String" syncable="YES"/>
+        <relationship name="accounts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="customer" inverseEntity="Account" syncable="YES"/>
+    </entity>
+    <entity name="SnapShot" representedClassName="SnapShot" syncable="YES" codeGenerationType="class">
+        <attribute name="balance" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="account" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="snapshots" inverseEntity="Account" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Customer" positionX="-63" positionY="-18" width="128" height="45"/>
-        <element name="Currency" positionX="-261" positionY="-189" width="128" height="45"/>
-        <element name="AccountCategory" positionX="-261" positionY="-45" width="128" height="45"/>
-        <element name="SnapShot" positionX="-63" positionY="-189" width="128" height="45"/>
+        <element name="Customer" positionX="187" positionY="-180" width="128" height="118"/>
+        <element name="Currency" positionX="-270" positionY="-315" width="128" height="88"/>
+        <element name="AccountCategory" positionX="-279" positionY="-133" width="128" height="88"/>
+        <element name="SnapShot" positionX="-11" positionY="-405" width="128" height="88"/>
+        <element name="Account" positionX="0" positionY="-216" width="128" height="178"/>
     </elements>
 </model>
