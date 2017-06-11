@@ -16,7 +16,6 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var subamountLabel: UILabel!
     @IBOutlet weak var leftImageView: UIImageView!
     
     static let height = CGFloat(70)

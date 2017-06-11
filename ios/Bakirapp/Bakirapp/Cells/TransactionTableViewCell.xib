@@ -50,17 +50,10 @@
                             <constraint firstAttribute="height" constant="1" id="g4i-5H-0mG"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-UO-DyQ">
-                        <rect key="frame" x="241" y="53" width="39.5" height="19.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" red="0.28235294119999998" green="0.56078431370000004" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="1hp-1b-f1W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="534-yd-yNd"/>
                     <constraint firstAttribute="trailing" secondItem="1hp-1b-f1W" secondAttribute="trailing" constant="20" id="9YD-2P-mGX"/>
-                    <constraint firstItem="XE9-UO-DyQ" firstAttribute="top" secondItem="G0W-BB-WUJ" secondAttribute="bottom" constant="2" id="9i9-zz-sNV"/>
                     <constraint firstItem="Iwv-SI-Axo" firstAttribute="bottom" secondItem="WUZ-sz-tiJ" secondAttribute="bottom" constant="-2" id="Jfx-dW-ZN9"/>
                     <constraint firstItem="PcI-Dk-Ixb" firstAttribute="leading" secondItem="WUZ-sz-tiJ" secondAttribute="trailing" constant="45" id="L91-6W-RcY"/>
                     <constraint firstAttribute="bottom" secondItem="1hp-1b-f1W" secondAttribute="bottom" id="Mdg-2S-fnm"/>
@@ -71,13 +64,11 @@
                     <constraint firstItem="G0W-BB-WUJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="e6x-4E-hkY"/>
                     <constraint firstItem="PcI-Dk-Ixb" firstAttribute="top" secondItem="WUZ-sz-tiJ" secondAttribute="top" id="rvp-Yv-O8t"/>
                     <constraint firstItem="WUZ-sz-tiJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="wWQ-V9-Bti"/>
-                    <constraint firstAttribute="trailing" secondItem="XE9-UO-DyQ" secondAttribute="trailing" constant="40" id="ydc-uQ-fOY"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="amountLabel" destination="G0W-BB-WUJ" id="TYm-hO-lva"/>
                 <outlet property="leftImageView" destination="WUZ-sz-tiJ" id="SdV-NL-RYP"/>
-                <outlet property="subamountLabel" destination="XE9-UO-DyQ" id="CzU-CU-iMT"/>
                 <outlet property="subtitleLabel" destination="Iwv-SI-Axo" id="c0A-Ba-OGP"/>
                 <outlet property="titleLabel" destination="PcI-Dk-Ixb" id="LAU-FE-dEo"/>
             </connections>
