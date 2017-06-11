@@ -71,7 +71,7 @@ class PromosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alertController = UIAlertController(title: "Do you want to contact you banker?", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Do you want to contact your banker?", message: nil, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Call Now", style: UIAlertActionStyle.default, handler: { (action) in
             guard let number = URL(string: "tel://80000800") else { return }
             UIApplication.shared.open(number)

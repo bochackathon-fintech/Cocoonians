@@ -85,7 +85,7 @@ class DashboardViewController: UIViewController {
                 
 //
                 let rightAxisFormatter = NumberFormatter()
-                rightAxisFormatter.negativePrefix = "€"
+                rightAxisFormatter.negativePrefix = "-€"
                 rightAxisFormatter.positivePrefix = "€"
                 
                 let rightAxis = lineChartView.rightAxis
