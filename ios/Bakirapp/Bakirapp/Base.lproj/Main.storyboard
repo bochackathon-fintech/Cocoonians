@@ -275,17 +275,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kEb-jY-TdR">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="284.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lfn-tt-Fkr" id="r71-WH-bhu"/>
+                                    <outlet property="delegate" destination="lfn-tt-Fkr" id="gN2-Bs-bTJ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8ov-bo-Gxo" firstAttribute="top" secondItem="kEb-jY-TdR" secondAttribute="bottom" id="4JX-jG-pUd"/>
                             <constraint firstItem="a1F-GL-1cQ" firstAttribute="top" secondItem="a7j-LW-w9o" secondAttribute="top" constant="20" id="7Xh-Cb-Iqh"/>
                             <constraint firstItem="a7j-LW-w9o" firstAttribute="leading" secondItem="9Yg-7t-Lkj" secondAttribute="leading" id="7fB-Dr-2hq"/>
+                            <constraint firstAttribute="trailing" secondItem="kEb-jY-TdR" secondAttribute="trailing" id="Afb-cW-c6G"/>
+                            <constraint firstItem="kEb-jY-TdR" firstAttribute="leading" secondItem="9Yg-7t-Lkj" secondAttribute="leading" id="eFk-8N-7fA"/>
                             <constraint firstItem="M4Q-m0-W4M" firstAttribute="top" secondItem="a1F-GL-1cQ" secondAttribute="bottom" constant="8" id="gZ4-oV-mAn"/>
                             <constraint firstItem="a1F-GL-1cQ" firstAttribute="leading" secondItem="a7j-LW-w9o" secondAttribute="leading" constant="20" id="ikP-py-Iep"/>
                             <constraint firstAttribute="trailing" secondItem="a7j-LW-w9o" secondAttribute="trailing" id="o7c-oJ-8Nj"/>
                             <constraint firstItem="M4Q-m0-W4M" firstAttribute="leading" secondItem="a1F-GL-1cQ" secondAttribute="leading" id="qQt-am-Ind"/>
                             <constraint firstItem="a7j-LW-w9o" firstAttribute="top" secondItem="9Yg-7t-Lkj" secondAttribute="top" id="vqY-zD-7xY"/>
                             <constraint firstItem="a7j-LW-w9o" firstAttribute="height" secondItem="9Yg-7t-Lkj" secondAttribute="height" multiplier="1/2" id="z12-gI-SgR"/>
+                            <constraint firstItem="kEb-jY-TdR" firstAttribute="top" secondItem="a7j-LW-w9o" secondAttribute="bottom" id="zgy-Py-GaC"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -293,6 +305,7 @@
                     <connections>
                         <outlet property="balanceAmountLabel" destination="M4Q-m0-W4M" id="h4U-LJ-uG1"/>
                         <outlet property="lineChartView" destination="a7j-LW-w9o" id="WPe-fe-zkj"/>
+                        <outlet property="tableView" destination="kEb-jY-TdR" id="meC-Na-GVx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZj-83-659" userLabel="First Responder" sceneMemberID="firstResponder"/>

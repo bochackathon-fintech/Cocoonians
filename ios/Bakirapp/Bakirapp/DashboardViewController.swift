@@ -10,15 +10,24 @@ import UIKit
 import Charts
 import CoreData
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var balanceAmountLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            
+        }
+    }
+    
+    private var transactions = [Transaction]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: TransactionTableViewCell.identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: TransactionTableViewCell.identifier)
 
-        // Do any additional setup after loading the view.
         
         self.tabBarController?.navigationItem.title = "Account"
         
@@ -31,6 +40,22 @@ class DashboardViewController: UIViewController {
             }
         }
         
+        self.configureTransactions()
+        
+    }
+    
+    private func configureTransactions()
+    {
+        let context = ContextManager.shared.mainContext
+        self.transactions = Transaction.getAllTransactions(context: context)
+        self.tableView.reloadData()
+        
+        Transaction.fetchTransactions { (success) in
+            DispatchQueue.main.async {
+                self.transactions = Transaction.getAllTransactions(context: context)
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,9 +152,26 @@ class DashboardViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }                      
+    }
     
-
+    //MARK: - TableView
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return TransactionTableViewCell.height
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.transactions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier, for: indexPath) as? TransactionTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.transaction = self.transactions[indexPath.row]
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 
