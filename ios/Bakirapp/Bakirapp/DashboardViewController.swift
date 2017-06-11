@@ -47,6 +47,7 @@ class DashboardViewController: UIViewController {
         lineChartView.legend.form = .none
         lineChartView.backgroundColor = UIColor.bakirBlue()
         lineChartView.animate(xAxisDuration: 1.5)
+        lineChartView.descriptionText = ""
 //        lineChartView.animate(xAxisDuration: 1.5, easingOption: ChartEasingOption.easeInElastic)
         
         
