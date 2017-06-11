@@ -90,13 +90,6 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         })
         
         self.transactionsDates = self.transactionsDates.removeDuplicates()
-        
-        
-//        _ = transactionsData.mapValues({ (transactions1) in
-//            print("---> \(transactions1)")
-//        })
-//
-//        _ = self.transactionsDates.map({print("tr date \($0)")})
         self.tableView.reloadData()
     }
     

@@ -26,7 +26,17 @@ class TransactionTableViewCell: UITableViewCell {
                 let iconUrl = URL(string: icon) {
                 self.leftImageView.sd_setImage(with: iconUrl)
             }
-            self.titleLabel.text = transaction.descr
+            else if let merchantIcon = transaction.merchant?.type_icon,
+                let iconUrl = URL(string: merchantIcon) {
+                self.leftImageView.sd_setImage(with: iconUrl)
+            }
+            
+            if let merchant = transaction.merchant {
+                self.titleLabel.text = merchant.name
+            }
+            else {
+                self.titleLabel.text = transaction.descr
+            }
             self.amountLabel.text = "€ \(transaction.amount)"
             self.subtitleLabel.text = transaction.merchant?.type ?? ""
         }
