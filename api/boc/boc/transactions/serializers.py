@@ -37,7 +37,7 @@ class SimpleAccountSerializer(serializers.ModelSerializer):
 
 
 class AccountSerializer(serializers.ModelSerializer):
-    daily_snapshots = AccountSnapshotSerializer(many=True, source='current_month_snapshots')
+    daily_snapshots = AccountSnapshotSerializer(many=True, source='last_30_days_snapshots')
     balance = serializers.DecimalField(max_digits=10, decimal_places=2)
     category = AccountCategorySerializer()
     currency = CurrencySerializer()

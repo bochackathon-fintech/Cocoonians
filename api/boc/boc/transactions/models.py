@@ -98,6 +98,12 @@ class Account(models.Model):
 
         return AccountSnapshot.objects.filter(account=self, date__gte=month_start, date__lte=month_end)
 
+    def last_30_days_snapshots(self):
+        end_date = date.today()
+        start_date = end_date + relativedelta(days=-30)
+
+        return AccountSnapshot.objects.filter(account=self, date__gte=start_date, date__lte=end_date)
+
     def balance(self):
         start_date = get_today_start()
         end_date = get_today_end()

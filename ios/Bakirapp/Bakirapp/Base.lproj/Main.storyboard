@@ -25,6 +25,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="NyF-sP-uo4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.28627450980392155" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
@@ -224,11 +225,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1F-GL-1cQ">
+                                <rect key="frame" x="20" y="20" width="70" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4Q-m0-W4M">
+                                <rect key="frame" x="20" y="52" width="9" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="a1F-GL-1cQ" firstAttribute="top" secondItem="a7j-LW-w9o" secondAttribute="top" constant="20" id="7Xh-Cb-Iqh"/>
                             <constraint firstItem="a7j-LW-w9o" firstAttribute="leading" secondItem="9Yg-7t-Lkj" secondAttribute="leading" id="7fB-Dr-2hq"/>
+                            <constraint firstItem="M4Q-m0-W4M" firstAttribute="top" secondItem="a1F-GL-1cQ" secondAttribute="bottom" constant="8" id="gZ4-oV-mAn"/>
+                            <constraint firstItem="a1F-GL-1cQ" firstAttribute="leading" secondItem="a7j-LW-w9o" secondAttribute="leading" constant="20" id="ikP-py-Iep"/>
                             <constraint firstAttribute="trailing" secondItem="a7j-LW-w9o" secondAttribute="trailing" id="o7c-oJ-8Nj"/>
+                            <constraint firstItem="M4Q-m0-W4M" firstAttribute="leading" secondItem="a1F-GL-1cQ" secondAttribute="leading" id="qQt-am-Ind"/>
                             <constraint firstItem="a7j-LW-w9o" firstAttribute="top" secondItem="9Yg-7t-Lkj" secondAttribute="top" id="vqY-zD-7xY"/>
                             <constraint firstItem="a7j-LW-w9o" firstAttribute="height" secondItem="9Yg-7t-Lkj" secondAttribute="height" multiplier="1/2" id="z12-gI-SgR"/>
                         </constraints>
@@ -236,6 +253,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard_tab" id="Lky-RL-oMa"/>
                     <connections>
+                        <outlet property="balanceAmountLabel" destination="M4Q-m0-W4M" id="h4U-LJ-uG1"/>
                         <outlet property="lineChartView" destination="a7j-LW-w9o" id="WPe-fe-zkj"/>
                     </connections>
                 </viewController>

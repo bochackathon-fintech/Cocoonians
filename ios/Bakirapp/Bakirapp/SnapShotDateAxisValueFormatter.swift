@@ -30,8 +30,10 @@ class SnapShotDateAxisValueFormatter:NSObject, IAxisValueFormatter{
         let snapshot = dataSet[index]
         
         let formatter = DateFormatter()
-        formatter.dateStyle = DateFormatter.Style.short
-        formatter.timeStyle = DateFormatter.Style.none
+//        formatter.dateStyle = DateFormatter.Style.short
+//        formatter.timeStyle = DateFormatter.Style.none
+       // formatter.dateFormat = "dd/MM"
+        
         formatter.dateFormat = "dd/MM"
         
         return formatter.string(from: snapshot.date as Date)
