@@ -29,12 +29,6 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
                 self.configureTransactions()
             }
         }
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     private func configureTransactions()
@@ -45,7 +39,7 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         let context = ContextManager.shared.mainContext
         let transactions = Transaction.getAllTransactions(context: context)
         
-        self.transactionsDates = transactions.map({return ($0.transaction_date as Date).getStringDate("dd, MMM yyyy")})
+        self.transactionsDates = transactions.map({return ($0.transaction_date as! Date).getStringDate("dd, MMM yyyy")})
         
         _ = self.transactionsDates.enumerated().map({ (index, date) in
             if var transactionsForDate = transactionsData[date] {

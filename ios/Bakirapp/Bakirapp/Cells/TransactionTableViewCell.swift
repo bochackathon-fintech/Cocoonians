@@ -28,7 +28,7 @@ class TransactionTableViewCell: UITableViewCell {
             }
             self.titleLabel.text = transaction.descr
             self.amountLabel.text = "€ \(transaction.amount)"
-            //self.subtitleLabel.text = transaction.
+            self.subtitleLabel.text = transaction.merchant?.type ?? ""
         }
     }
     

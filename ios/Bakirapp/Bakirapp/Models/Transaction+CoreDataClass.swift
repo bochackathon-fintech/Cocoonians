@@ -33,10 +33,18 @@ public class Transaction: NSManagedObject {
                     return nil
             }
             
+            var inMerchant: Merchant?
+            
+            if let merchantJSON = json["merchant"] as? [String : Any],
+                let merchant = Merchant.create(context: context, json: merchantJSON)
+            {
+                inMerchant = merchant
+            }
+            
             if let object = (try context.fetch(request).last ??
                 NSEntityDescription.insertNewObject(forEntityName: Transaction.className, into: context)) as? Transaction
             {
-                object.parse(json: json, transactionId: transactionId, account: account, transactionType: trans_type, context: context)
+                object.parse(json: json, transactionId: transactionId, account: account, transactionType: trans_type, merchant: inMerchant, context: context)
                 try context.save()
                 return object
             }
@@ -48,12 +56,13 @@ public class Transaction: NSManagedObject {
         return nil
     }
     
-    func parse(json: [String : Any], transactionId: Int, account: Account, transactionType: TransactionType, context: NSManagedObjectContext)
+    func parse(json: [String : Any], transactionId: Int, account: Account, transactionType: TransactionType, merchant: Merchant?, context: NSManagedObjectContext)
     {
-        self.transaction_id = transactionId
+        self.transaction_id = Int64(transactionId)
         self.account = account
         self.type = transactionType
-        
+        self.merchant = merchant
+
         if let amountStr = json["amount"] as? String,
             let amountFloat = Float(amountStr)
         {
@@ -72,6 +81,7 @@ public class Transaction: NSManagedObject {
         if let tags = json["tags"] as? String {
             self.tags = tags
         }
+        
     }
     
     class func getAllTransactions(context: NSManagedObjectContext) -> [Transaction] {
