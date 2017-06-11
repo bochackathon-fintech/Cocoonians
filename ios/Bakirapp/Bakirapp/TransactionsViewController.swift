@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toaster
 
 class TransactionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -22,6 +23,8 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
     private var transactionsDates = [String]()
     
     override func viewDidLoad() {
+        TransactionAnalyzer.shared.activated = true
+        
         super.viewDidLoad()
         self.configureTransactions()
         Transaction.fetchTransactions { (success) in
@@ -29,6 +32,38 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
                 self.configureTransactions()
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.analyzeTransactions()
+
+    }
+    
+    func analyzeTransactions(){
+        let context = ContextManager.shared.mainContext
+        let transactions = Transaction.getAllTransactions(context: context)
+        
+        var sentencesToAnalyze:[String] = []
+        
+        for transaction in transactions{
+            if let descr = transaction.descr{
+                sentencesToAnalyze.append(descr)
+            }
+            if let merchant = transaction.merchant, let merchant_name = merchant.name {
+                sentencesToAnalyze.append(merchant_name)
+            }
+        }
+        
+        let lemmas = TransactionAnalyzer().countWords(strings: sentencesToAnalyze)
+        for (key, count) in lemmas{
+            if count >= 3{
+                Toast(text: "Found a new pattern: \(key)", duration: 5.0).show()                
+            }
+        }
+        
+        //        let wordset = TransactionAnalyzer().setOfWords(strings: ["Hiking trip at the Alpes with friends", "Hiked home"])
+        //        print(wordset)
     }
     
     private func configureTransactions()
@@ -41,7 +76,9 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         
         self.transactionsDates = transactions.map({return ($0.transaction_date as! Date).getStringDate("dd, MMM yyyy")})
         
-        _ = self.transactionsDates.enumerated().map({ (index, date) in
+        _ = self.transactionsDates.enumerated().map({ (arg) in
+            
+            let (index, date) = arg
             if var transactionsForDate = transactionsData[date] {
                 transactionsForDate.append(transactions[index])
                 transactionsData[date] = transactionsForDate

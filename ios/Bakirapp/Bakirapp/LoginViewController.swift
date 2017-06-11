@@ -18,6 +18,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var nameImageView: UIImageView!{
+        didSet{
+            nameImageView.isUserInteractionEnabled = true
+            let doubleTabGesture = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.enableML))
+            doubleTabGesture.numberOfTapsRequired = 2
+            nameImageView.addGestureRecognizer(doubleTabGesture)
+        }
+    }
     @IBOutlet weak var bakiraLogoImageView: UIImageView! {
         didSet {
             bakiraLogoImageView.isUserInteractionEnabled = true
@@ -89,13 +97,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func bocLogoDoubleTouched()
+    @objc func bocLogoDoubleTouched()
     {
         self.usernameTextField.text = "u45653"
         self.passwordTextField.text = "qwerty123"
     }
     
-    func showFingerprintIfNeeded()
+    @objc func enableML()
+    {
+        TransactionAnalyzer.shared.activated = true
+    }
+    
+    @objc func showFingerprintIfNeeded()
     {
         print("show fingerprint if needed")
         if UserDefaults.hasToken

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -161,6 +160,7 @@
                     <connections>
                         <outlet property="bakiraLogoImageView" destination="BCZ-bq-QdC" id="jkz-ih-Whh"/>
                         <outlet property="loginButton" destination="CkQ-0i-fZl" id="3qs-MX-MrT"/>
+                        <outlet property="nameImageView" destination="3Qj-sl-RWU" id="wqO-Ez-jps"/>
                         <outlet property="passwordTextField" destination="7gF-fF-vCq" id="vVc-oN-87g"/>
                         <outlet property="usernameTextField" destination="DIT-TT-PGK" id="gcs-XJ-Dke"/>
                         <outletCollection property="textFields" destination="DIT-TT-PGK" collectionClass="NSMutableArray" id="kJM-ZR-89n"/>
