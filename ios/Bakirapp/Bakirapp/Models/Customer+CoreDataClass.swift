@@ -18,7 +18,7 @@ public class Customer: NSManagedObject {
         let className = Customer.className
         
         let request = NSFetchRequest<Customer>(entityName: className)
-        request.predicate = NSPredicate(format: "customer_number = %s", customer_number)
+        request.predicate = NSPredicate(format: "customer_number = %@", customer_number)
         
         do {
             let object = (try context.fetch(request).last ??

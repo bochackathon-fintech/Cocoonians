@@ -17,7 +17,7 @@ extension SnapShot {
         return NSFetchRequest<SnapShot>(entityName: "SnapShot")
     }
 
-    @NSManaged public var date: NSDate?
+    @NSManaged public var date: NSDate
     @NSManaged public var balance: Float
     @NSManaged public var account: Account?
 
