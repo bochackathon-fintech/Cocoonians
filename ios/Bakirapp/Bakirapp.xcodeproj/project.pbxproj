@@ -38,6 +38,9 @@
 		5808752A1EEBE4CA008FFDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580875291EEBE4CA008FFDBE /* Assets.xcassets */; };
 		5808752D1EEBE4CA008FFDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5808752B1EEBE4CA008FFDBE /* LaunchScreen.storyboard */; };
 		580875351EEBE89D008FFDBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580875341EEBE89D008FFDBE /* LoginViewController.swift */; };
+		581543FF1EED3CDB000CDDF0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397BCC081EED254600586789 /* Date+Extensions.swift */; };
+		581544021EED47ED000CDDF0 /* Merchant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581544001EED47ED000CDDF0 /* Merchant+CoreDataClass.swift */; };
+		581544031EED47ED000CDDF0 /* Merchant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581544011EED47ED000CDDF0 /* Merchant+CoreDataProperties.swift */; };
 		5819B0951EEC772F00EE8F32 /* Transaction+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5819B0941EEC772F00EE8F32 /* Transaction+Parse.swift */; };
 		5834E1D71EEC69680085E207 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E1D51EEC69680085E207 /* TransactionTableViewCell.swift */; };
 		5834E1D81EEC69680085E207 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5834E1D61EEC69680085E207 /* TransactionTableViewCell.xib */; };
@@ -83,6 +86,8 @@
 		5808752C1EEBE4CA008FFDBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5808752E1EEBE4CA008FFDBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580875341EEBE89D008FFDBE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		581544001EED47ED000CDDF0 /* Merchant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Merchant+CoreDataClass.swift"; sourceTree = "<group>"; };
+		581544011EED47ED000CDDF0 /* Merchant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Merchant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5819B0941EEC772F00EE8F32 /* Transaction+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+Parse.swift"; sourceTree = "<group>"; };
 		5834E1D51EEC69680085E207 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		5834E1D61EEC69680085E207 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
@@ -117,6 +122,8 @@
 		39D4E9421EEC533000F6B900 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				581544001EED47ED000CDDF0 /* Merchant+CoreDataClass.swift */,
+				581544011EED47ED000CDDF0 /* Merchant+CoreDataProperties.swift */,
 				39D4E9591EEC5A2300F6B900 /* Transaction+CoreDataClass.swift */,
 				39D4E95A1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift */,
 				5819B0941EEC772F00EE8F32 /* Transaction+Parse.swift */,
@@ -355,6 +362,7 @@
 			files = (
 				39D4E95E1EEC5A2300F6B900 /* Transaction+CoreDataProperties.swift in Sources */,
 				39D4E9621EEC5DD500F6B900 /* DashboardViewController.swift in Sources */,
+				581544031EED47ED000CDDF0 /* Merchant+CoreDataProperties.swift in Sources */,
 				580875351EEBE89D008FFDBE /* LoginViewController.swift in Sources */,
 				58FCEF591EEC174300EF676D /* UserDefault.swift in Sources */,
 				39D4E94E1EEC535000F6B900 /* Customer+CoreDataProperties.swift in Sources */,
@@ -366,6 +374,7 @@
 				58FCEF541EEBFD8C00EF676D /* Feeds.swift in Sources */,
 				39D4E94D1EEC535000F6B900 /* Customer+CoreDataClass.swift in Sources */,
 				39D4E95D1EEC5A2300F6B900 /* Transaction+CoreDataClass.swift in Sources */,
+				581544021EED47ED000CDDF0 /* Merchant+CoreDataClass.swift in Sources */,
 				39D4E9511EEC535000F6B900 /* SnapShot+CoreDataClass.swift in Sources */,
 				39D4E9671EEC785D00F6B900 /* String+Extensions.swift in Sources */,
 				39D4E9531EEC535000F6B900 /* Account+CoreDataClass.swift in Sources */,

@@ -16,7 +16,6 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var subamountLabel: UILabel!
     @IBOutlet weak var leftImageView: UIImageView!
     
     static let height = CGFloat(70)
@@ -29,7 +28,7 @@ class TransactionTableViewCell: UITableViewCell {
             }
             self.titleLabel.text = transaction.descr
             self.amountLabel.text = "€ \(transaction.amount)"
-            //self.subtitleLabel.text = transaction.
+            self.subtitleLabel.text = transaction.merchant?.type ?? ""
         }
     }
     

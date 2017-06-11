@@ -23,36 +23,37 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureTransactions()
         Transaction.fetchTransactions { (success) in
             DispatchQueue.main.async {
                 self.configureTransactions()
             }
         }
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     private func configureTransactions()
     {
+        self.transactionsDates.removeAll()
+        self.transactionsData.removeAll()
+        
         let context = ContextManager.shared.mainContext
         let transactions = Transaction.getAllTransactions(context: context)
-        self.transactionsDates = transactions.map({
-            return ($0.transaction_date as Date).getStringDate("dd, MMM yyyy")
-        })
+        
+        self.transactionsDates = transactions.map({return ($0.transaction_date as! Date).getStringDate("dd, MMM yyyy")})
         
         _ = self.transactionsDates.enumerated().map({ (index, date) in
             if var transactionsForDate = transactionsData[date] {
                 transactionsForDate.append(transactions[index])
+                transactionsData[date] = transactionsForDate
             }
             else
             {
                 transactionsData[date] = [transactions[index]]
             }
         })
+        
+        self.transactionsDates = self.transactionsDates.removeDuplicates()
+        
         
 //        _ = transactionsData.mapValues({ (transactions1) in
 //            print("---> \(transactions1)")
@@ -103,6 +104,7 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         return 30
     }
     
+    
     /*
     // MARK: - Navigation
 
@@ -114,4 +116,17 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
     */
 }
 
+extension Array where Element:Equatable {
+    func removeDuplicates() -> [Element] {
+        var result = [Element]()
+        
+        for value in self {
+            if result.contains(value) == false {
+                result.append(value)
+            }
+        }
+        
+        return result
+    }
+}
 

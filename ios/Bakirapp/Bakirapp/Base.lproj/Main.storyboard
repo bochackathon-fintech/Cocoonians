@@ -209,7 +209,7 @@
             </objects>
             <point key="canvasLocation" x="1872.8" y="990.85457271364328"/>
         </scene>
-        <!--Promotions-->
+        <!--Transactions-->
         <scene sceneID="d6I-kN-ooq">
             <objects>
                 <viewController storyboardIdentifier="PromotionsViewController" id="uyB-kj-qJ2" customClass="TransactionsViewController" customModule="Bakirapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -238,7 +238,7 @@
                             <constraint firstAttribute="trailing" secondItem="sLf-bz-uEg" secondAttribute="trailing" id="pIE-oj-Uuo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Promotions" image="euro_tab" id="xWF-RM-olM"/>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="transaction_icon" id="xWF-RM-olM"/>
                     <connections>
                         <outlet property="tableView" destination="sLf-bz-uEg" id="EEj-s5-iT7"/>
                     </connections>
@@ -327,6 +327,7 @@
         <image name="euro_tab" width="27" height="27"/>
         <image name="locker_icon" width="66" height="84"/>
         <image name="logo" width="157" height="147"/>
+        <image name="transaction_icon" width="28" height="28"/>
         <image name="user_icon" width="84" height="84"/>
     </resources>
     <color key="tintColor" red="0.28627450980000002" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
