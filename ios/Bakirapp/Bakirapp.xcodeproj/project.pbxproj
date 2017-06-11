@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		397E86281EED430F008083EB /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397BCC081EED254600586789 /* Date+Extensions.swift */; };
+		397E862A1EED447D008083EB /* PromosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E86291EED447D008083EB /* PromosViewController.swift */; };
+		397E862D1EED44FA008083EB /* PromoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E862B1EED44FA008083EB /* PromoTableViewCell.swift */; };
+		397E862E1EED44FA008083EB /* PromoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397E862C1EED44FA008083EB /* PromoTableViewCell.xib */; };
 		39B66FA51EED1BE300B17DFA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B66FA41EED1BE300B17DFA /* UIColor+Extension.swift */; };
 		39C81E621EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C81E611EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift */; };
 		39D4E94D1EEC535000F6B900 /* Customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9431EEC535000F6B900 /* Customer+CoreDataClass.swift */; };
@@ -47,6 +51,9 @@
 /* Begin PBXFileReference section */
 		26F7F49255DDE80AAF69550F /* Pods-Bakirapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bakirapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bakirapp/Pods-Bakirapp.debug.xcconfig"; sourceTree = "<group>"; };
 		397BCC081EED254600586789 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		397E86291EED447D008083EB /* PromosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromosViewController.swift; sourceTree = "<group>"; };
+		397E862B1EED44FA008083EB /* PromoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTableViewCell.swift; sourceTree = "<group>"; };
+		397E862C1EED44FA008083EB /* PromoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTableViewCell.xib; sourceTree = "<group>"; };
 		39B66FA41EED1BE300B17DFA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		39C81E611EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotDateAxisValueFormatter.swift; sourceTree = "<group>"; };
 		39D4E9431EEC535000F6B900 /* Customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -169,6 +176,7 @@
 				580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */,
 				580875341EEBE89D008FFDBE /* LoginViewController.swift */,
 				5834E1D91EEC6D0B0085E207 /* TransactionsViewController.swift */,
+				397E86291EED447D008083EB /* PromosViewController.swift */,
 				39D4E9611EEC5DD500F6B900 /* DashboardViewController.swift */,
 				39C81E611EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift */,
 				580875231EEBE4CA008FFDBE /* Main.storyboard */,
@@ -194,6 +202,8 @@
 			children = (
 				5834E1D51EEC69680085E207 /* TransactionTableViewCell.swift */,
 				5834E1D61EEC69680085E207 /* TransactionTableViewCell.xib */,
+				397E862B1EED44FA008083EB /* PromoTableViewCell.swift */,
+				397E862C1EED44FA008083EB /* PromoTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -282,6 +292,7 @@
 			files = (
 				5808752D1EEBE4CA008FFDBE /* LaunchScreen.storyboard in Resources */,
 				5808752A1EEBE4CA008FFDBE /* Assets.xcassets in Resources */,
+				397E862E1EED44FA008083EB /* PromoTableViewCell.xib in Resources */,
 				5834E1D81EEC69680085E207 /* TransactionTableViewCell.xib in Resources */,
 				580875251EEBE4CA008FFDBE /* Main.storyboard in Resources */,
 			);
@@ -351,6 +362,7 @@
 				580875281EEBE4CA008FFDBE /* Bakirapp.xcdatamodeld in Sources */,
 				39D4E9551EEC535000F6B900 /* AccountCategory+CoreDataClass.swift in Sources */,
 				58FCEF561EEC107900EF676D /* Keys.swift in Sources */,
+				397E86281EED430F008083EB /* Date+Extensions.swift in Sources */,
 				58FCEF541EEBFD8C00EF676D /* Feeds.swift in Sources */,
 				39D4E94D1EEC535000F6B900 /* Customer+CoreDataClass.swift in Sources */,
 				39D4E95D1EEC5A2300F6B900 /* Transaction+CoreDataClass.swift in Sources */,
@@ -361,6 +373,7 @@
 				39D4E95F1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift in Sources */,
 				39D4E9641EEC6BFF00F6B900 /* ContextManager.swift in Sources */,
 				5819B0951EEC772F00EE8F32 /* Transaction+Parse.swift in Sources */,
+				397E862A1EED447D008083EB /* PromosViewController.swift in Sources */,
 				39D4E9581EEC562000F6B900 /* Account+Parse.swift in Sources */,
 				39B66FA51EED1BE300B17DFA /* UIColor+Extension.swift in Sources */,
 				5834E1D71EEC69680085E207 /* TransactionTableViewCell.swift in Sources */,
@@ -369,6 +382,7 @@
 				5834E1DA1EEC6D0B0085E207 /* TransactionsViewController.swift in Sources */,
 				39D4E9541EEC535000F6B900 /* Account+CoreDataProperties.swift in Sources */,
 				39D4E94F1EEC535000F6B900 /* Currency+CoreDataClass.swift in Sources */,
+				397E862D1EED44FA008083EB /* PromoTableViewCell.swift in Sources */,
 				39D4E9561EEC535000F6B900 /* AccountCategory+CoreDataProperties.swift in Sources */,
 				39D4E9601EEC5A2300F6B900 /* TransactionType+CoreDataProperties.swift in Sources */,
 				580875201EEBE4CA008FFDBE /* AppDelegate.swift in Sources */,
