@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39B66FA51EED1BE300B17DFA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B66FA41EED1BE300B17DFA /* UIColor+Extension.swift */; };
+		39C81E621EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C81E611EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift */; };
 		39D4E94D1EEC535000F6B900 /* Customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9431EEC535000F6B900 /* Customer+CoreDataClass.swift */; };
 		39D4E94E1EEC535000F6B900 /* Customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9441EEC535000F6B900 /* Customer+CoreDataProperties.swift */; };
 		39D4E94F1EEC535000F6B900 /* Currency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E9451EEC535000F6B900 /* Currency+CoreDataClass.swift */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		26F7F49255DDE80AAF69550F /* Pods-Bakirapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bakirapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bakirapp/Pods-Bakirapp.debug.xcconfig"; sourceTree = "<group>"; };
+		39B66FA41EED1BE300B17DFA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		39C81E611EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotDateAxisValueFormatter.swift; sourceTree = "<group>"; };
 		39D4E9431EEC535000F6B900 /* Customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		39D4E9441EEC535000F6B900 /* Customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		39D4E9451EEC535000F6B900 /* Currency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				39D4E9661EEC785D00F6B900 /* String+Extensions.swift */,
+				39B66FA41EED1BE300B17DFA /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				580875341EEBE89D008FFDBE /* LoginViewController.swift */,
 				5834E1D91EEC6D0B0085E207 /* PromotionsViewController.swift */,
 				39D4E9611EEC5DD500F6B900 /* DashboardViewController.swift */,
+				39C81E611EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift */,
 				580875231EEBE4CA008FFDBE /* Main.storyboard */,
 				580875291EEBE4CA008FFDBE /* Assets.xcassets */,
 				5808752B1EEBE4CA008FFDBE /* LaunchScreen.storyboard */,
@@ -338,9 +344,11 @@
 				39D4E9511EEC535000F6B900 /* SnapShot+CoreDataClass.swift in Sources */,
 				39D4E9671EEC785D00F6B900 /* String+Extensions.swift in Sources */,
 				39D4E9531EEC535000F6B900 /* Account+CoreDataClass.swift in Sources */,
+				39C81E621EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift in Sources */,
 				39D4E95F1EEC5A2300F6B900 /* TransactionType+CoreDataClass.swift in Sources */,
 				39D4E9641EEC6BFF00F6B900 /* ContextManager.swift in Sources */,
 				39D4E9581EEC562000F6B900 /* Account+Parse.swift in Sources */,
+				39B66FA51EED1BE300B17DFA /* UIColor+Extension.swift in Sources */,
 				5834E1D71EEC69680085E207 /* TransactionTableViewCell.swift in Sources */,
 				39D4E9501EEC535000F6B900 /* Currency+CoreDataProperties.swift in Sources */,
 				580875221EEBE4CA008FFDBE /* BakiraTabBarController.swift in Sources */,

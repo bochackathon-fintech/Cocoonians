@@ -20,10 +20,12 @@
         <scene sceneID="Mwm-i3-F9s">
             <objects>
                 <navigationController storyboardIdentifier="BakiraNavigationController" navigationBarHidden="YES" id="gpK-eN-s0w" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NyF-sP-uo4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="NyF-sP-uo4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.28627450980392155" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ahf-fE-DC5"/>
@@ -46,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wk4-DN-uN6">
-                                <rect key="frame" x="40" y="285" width="295" height="61"/>
+                                <rect key="frame" x="40" y="310" width="295" height="61"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locker_icon" translatesAutoresizingMaskIntoConstraints="NO" id="rDJ-Jg-bnL">
                                         <rect key="frame" x="0.0" y="20" width="23.5" height="21"/>
@@ -78,7 +80,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORR-3e-fxh">
-                                <rect key="frame" x="40" y="209" width="295" height="61"/>
+                                <rect key="frame" x="40" y="234" width="295" height="61"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UeL-jq-35i">
                                         <rect key="frame" x="0.0" y="20" width="23.5" height="21"/>
@@ -123,14 +125,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BCZ-bq-QdC">
-                                <rect key="frame" x="137" y="20" width="100" height="100"/>
+                                <rect key="frame" x="137" y="45" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="8jP-MN-yAt"/>
                                     <constraint firstAttribute="height" constant="100" id="b66-8r-7kR"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_text" translatesAutoresizingMaskIntoConstraints="NO" id="3Qj-sl-RWU">
-                                <rect key="frame" x="67" y="130" width="240" height="41"/>
+                                <rect key="frame" x="67" y="155" width="240" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="ulg-VW-U0Z"/>
                                     <constraint firstAttribute="width" constant="240" id="wCK-ye-pjg"/>
@@ -150,7 +152,7 @@
                             <constraint firstItem="wk4-DN-uN6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="jSx-SP-eUw"/>
                             <constraint firstAttribute="trailing" secondItem="wk4-DN-uN6" secondAttribute="trailing" constant="40" id="k4z-zR-X47"/>
                             <constraint firstAttribute="trailing" secondItem="ORR-3e-fxh" secondAttribute="trailing" constant="40" id="pA5-OP-EpA"/>
-                            <constraint firstItem="BCZ-bq-QdC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qOg-Wb-69h"/>
+                            <constraint firstItem="BCZ-bq-QdC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="qOg-Wb-69h"/>
                             <constraint firstItem="3Qj-sl-RWU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="udc-gr-TwO"/>
                         </constraints>
                     </view>
@@ -218,7 +220,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7j-LW-w9o" customClass="LineChartView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7j-LW-w9o" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -231,9 +233,10 @@
                             <constraint firstItem="a7j-LW-w9o" firstAttribute="height" secondItem="9Yg-7t-Lkj" secondAttribute="height" multiplier="1/2" id="z12-gI-SgR"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard_tab" id="Lky-RL-oMa"/>
                     <connections>
-                        <outlet property="lineChartView" destination="a7j-LW-w9o" id="dwo-Wf-2B8"/>
+                        <outlet property="lineChartView" destination="a7j-LW-w9o" id="WPe-fe-zkj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZj-83-659" userLabel="First Responder" sceneMemberID="firstResponder"/>
