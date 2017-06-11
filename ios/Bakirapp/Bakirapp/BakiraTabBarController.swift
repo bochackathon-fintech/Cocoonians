@@ -21,7 +21,14 @@ class BakiraTabBarController: UITabBarController {
         let backButton = UIBarButtonItem(title: "", style: .plain, target: navigationController, action: nil)
         navigationItem.leftBarButtonItem = backButton
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"bell"), style: .done, target: self, action: #selector(BakiraTabBarController.goToPromotions))
+        
     }
-
+    
+    func goToPromotions() {
+        self.selectedIndex = 1
+    }
+    
 }
 
