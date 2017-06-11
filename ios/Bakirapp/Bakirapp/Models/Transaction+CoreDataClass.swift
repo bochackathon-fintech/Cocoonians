@@ -25,13 +25,11 @@ public class Transaction: NSManagedObject {
             guard let account_data = json["account"] as? [String : Any],
                 let accounNumber = account_data["acount_number"] as? String,
                 let account = Account.findAccount(context: context, accountNumber: accounNumber) else {
-//                self.account = account
                     return nil
             }
             
             guard let transaction_type = json["transaction_type"] as? [String : Any],
                 let trans_type = TransactionType.create(context: context, json: transaction_type) else {
-//                self.type = trans_type
                     return nil
             }
             
@@ -74,6 +72,20 @@ public class Transaction: NSManagedObject {
         if let tags = json["tags"] as? String {
             self.tags = tags
         }
+    }
+    
+    class func getAllTransactions(context: NSManagedObjectContext) -> [Transaction] {
+        let request = NSFetchRequest<Transaction>(entityName: Transaction.className)
+        
+        let sortDescriptor = NSSortDescriptor(key: "transaction_date", ascending: false)
+        request.sortDescriptors = [sortDescriptor]
+        do {
+            return try context.fetch(request)
+        }
+        catch {
+            print(error)
+        }
+        return []
     }
     
 }

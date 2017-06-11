@@ -75,8 +75,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="ammountLabel" destination="G0W-BB-WUJ" id="3EV-gT-iGX"/>
-                <outlet property="subamountLabel" destination="XE9-UO-DyQ" id="ryy-gz-LgQ"/>
+                <outlet property="amountLabel" destination="G0W-BB-WUJ" id="TYm-hO-lva"/>
+                <outlet property="leftImageView" destination="WUZ-sz-tiJ" id="SdV-NL-RYP"/>
+                <outlet property="subamountLabel" destination="XE9-UO-DyQ" id="CzU-CU-iMT"/>
                 <outlet property="subtitleLabel" destination="Iwv-SI-Axo" id="c0A-Ba-OGP"/>
                 <outlet property="titleLabel" destination="PcI-Dk-Ixb" id="LAU-FE-dEo"/>
             </connections>
