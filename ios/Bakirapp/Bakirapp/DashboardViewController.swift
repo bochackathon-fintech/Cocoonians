@@ -47,12 +47,13 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     private func configureTransactions()
     {
         let context = ContextManager.shared.mainContext
-        self.transactions = Transaction.getAllTransactions(context: context)
+        self.transactions = Transaction.getAllTransactions(context: context, limitToTen: true)
         self.tableView.reloadData()
         
         Transaction.fetchTransactions { (success) in
             DispatchQueue.main.async {
-                self.transactions = Transaction.getAllTransactions(context: context)
+                self.transactions = Transaction.getAllTransactions(context: context, limitToTen: true)
+                PromotionsSingleton.shared.lookForPossiblePromos(promo: PromoType.newbaby)
                 self.tableView.reloadData()
             }
         }

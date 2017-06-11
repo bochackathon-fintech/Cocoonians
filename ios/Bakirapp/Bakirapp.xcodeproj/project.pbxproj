@@ -38,13 +38,13 @@
 		5808752A1EEBE4CA008FFDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580875291EEBE4CA008FFDBE /* Assets.xcassets */; };
 		5808752D1EEBE4CA008FFDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5808752B1EEBE4CA008FFDBE /* LaunchScreen.storyboard */; };
 		580875351EEBE89D008FFDBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580875341EEBE89D008FFDBE /* LoginViewController.swift */; };
-		581543FF1EED3CDB000CDDF0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397BCC081EED254600586789 /* Date+Extensions.swift */; };
 		581544021EED47ED000CDDF0 /* Merchant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581544001EED47ED000CDDF0 /* Merchant+CoreDataClass.swift */; };
 		581544031EED47ED000CDDF0 /* Merchant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581544011EED47ED000CDDF0 /* Merchant+CoreDataProperties.swift */; };
 		5819B0951EEC772F00EE8F32 /* Transaction+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5819B0941EEC772F00EE8F32 /* Transaction+Parse.swift */; };
 		5834E1D71EEC69680085E207 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E1D51EEC69680085E207 /* TransactionTableViewCell.swift */; };
 		5834E1D81EEC69680085E207 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5834E1D61EEC69680085E207 /* TransactionTableViewCell.xib */; };
 		5834E1DA1EEC6D0B0085E207 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E1D91EEC6D0B0085E207 /* TransactionsViewController.swift */; };
+		583CD2EB1EED67860037B2B4 /* PromotionsSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583CD2EA1EED67860037B2B4 /* PromotionsSingleton.swift */; };
 		58FCEF541EEBFD8C00EF676D /* Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCEF531EEBFD8C00EF676D /* Feeds.swift */; };
 		58FCEF561EEC107900EF676D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCEF551EEC107900EF676D /* Keys.swift */; };
 		58FCEF591EEC174300EF676D /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCEF581EEC174300EF676D /* UserDefault.swift */; };
@@ -92,6 +92,7 @@
 		5834E1D51EEC69680085E207 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		5834E1D61EEC69680085E207 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		5834E1D91EEC6D0B0085E207 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		583CD2EA1EED67860037B2B4 /* PromotionsSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsSingleton.swift; sourceTree = "<group>"; };
 		58FCEF531EEBFD8C00EF676D /* Feeds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feeds.swift; sourceTree = "<group>"; };
 		58FCEF551EEC107900EF676D /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		58FCEF581EEC174300EF676D /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
@@ -192,6 +193,7 @@
 				5808752E1EEBE4CA008FFDBE /* Info.plist */,
 				580875261EEBE4CA008FFDBE /* Bakirapp.xcdatamodeld */,
 				39D4E9631EEC6BFF00F6B900 /* ContextManager.swift */,
+				583CD2EA1EED67860037B2B4 /* PromotionsSingleton.swift */,
 			);
 			path = Bakirapp;
 			sourceTree = "<group>";
@@ -369,6 +371,7 @@
 				39D4E9521EEC535000F6B900 /* SnapShot+CoreDataProperties.swift in Sources */,
 				580875281EEBE4CA008FFDBE /* Bakirapp.xcdatamodeld in Sources */,
 				39D4E9551EEC535000F6B900 /* AccountCategory+CoreDataClass.swift in Sources */,
+				583CD2EB1EED67860037B2B4 /* PromotionsSingleton.swift in Sources */,
 				58FCEF561EEC107900EF676D /* Keys.swift in Sources */,
 				397E86281EED430F008083EB /* Date+Extensions.swift in Sources */,
 				58FCEF541EEBFD8C00EF676D /* Feeds.swift in Sources */,

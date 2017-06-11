@@ -84,9 +84,11 @@ public class Transaction: NSManagedObject {
         
     }
     
-    class func getAllTransactions(context: NSManagedObjectContext) -> [Transaction] {
+    class func getAllTransactions(context: NSManagedObjectContext, limitToTen: Bool = false) -> [Transaction] {
         let request = NSFetchRequest<Transaction>(entityName: Transaction.className)
-        
+        if limitToTen {
+            request.fetchLimit = 10
+        }
         let sortDescriptor = NSSortDescriptor(key: "transaction_date", ascending: false)
         request.sortDescriptors = [sortDescriptor]
         do {
@@ -98,4 +100,17 @@ public class Transaction: NSManagedObject {
         return []
     }
     
+    class func getTransactions(context: NSManagedObjectContext, usingMerchantType type: String) -> [Transaction] {
+        let request = NSFetchRequest<Transaction>(entityName: Transaction.className)
+        request.predicate = NSPredicate(format: "merchant.type CONTAINS[cd] %@", type)
+//        let sortDescriptor = NSSortDescriptor(key: "transaction_date", ascending: false)
+//        request.sortDescriptors = [sortDescriptor]
+        do {
+            return try context.fetch(request)
+        }
+        catch {
+            print(error)
+        }
+        return []
+    }
 }

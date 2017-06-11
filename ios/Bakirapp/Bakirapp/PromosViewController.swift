@@ -8,11 +8,11 @@
 
 import UIKit
 
-enum PromoType{
-    case newbaby
-    case vacation
-    case raise
-    case wedding
+enum PromoType: String{
+    case newbaby = "baby"
+    case vacation = "vacation"
+    case raise = "raise"
+    case wedding = "wedding"
 }
 
 struct Promo{
@@ -24,13 +24,6 @@ struct Promo{
 
 class PromosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let promos:[Promo] =
-        [Promo(image: UIImage(named:"Baby")!, title: "Expecting?", description: "Your new baby is on its way. Open the baby savings account and prepare for a bright future!", type: .newbaby),
-    Promo(image: UIImage(named:"Car")!, title: "Looking for a new car?", description: "A bigger family calls for a bigger car. You could be sitting behind the steering wheel of your new car faster than you might have imagined.", type: .newbaby),
-    Promo(image: UIImage(named:"Holidays")!, title: "You’re going on a trip!", description: "Book your travel insurance for your trip and get rewarded with double points on your credit card!", type: .vacation),
-    Promo(image: UIImage(named:"Raise")!, title: "You got a raise! Congrats!", description: "Open a new savings account and take advantage of our great interest rates. ", type: .raise),
-    Promo(image: UIImage(named:"Wedding")!, title: "You’re getting married!", description: "Open the newlyweds account and save for a brighter future together.", type: .wedding)
-    ]
     
     @IBOutlet weak var tableView: UITableView!{
         didSet{
@@ -57,16 +50,14 @@ class PromosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return promos.count
+        return PromotionsSingleton.shared.possiblePromos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PromoTableViewCell.identifier, for: indexPath) as? PromoTableViewCell else {
             return UITableViewCell()
         }
-        
-        cell.promo = promos[indexPath.row]
-        
+        cell.promo = PromotionsSingleton.shared.possiblePromos[indexPath.row]        
         return cell
     }
     
