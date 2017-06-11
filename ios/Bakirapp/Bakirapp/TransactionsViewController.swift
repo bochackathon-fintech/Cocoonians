@@ -31,6 +31,17 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let timer = Timer(fire: Date(), interval: 3.0, repeats: false) { (timer) in
+            print("triggered")
+            PromotionsSingleton.shared.promotionsTriggered = true
+            PromotionsSingleton.shared.lookForPossiblePromos(promo: PromoType.newbaby)
+            self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.yellow
+        }
+        timer.fire()
+    }
+    
     private func configureTransactions()
     {
         self.transactionsDates.removeAll()

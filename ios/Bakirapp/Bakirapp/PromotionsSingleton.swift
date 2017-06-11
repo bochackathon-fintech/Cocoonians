@@ -13,6 +13,8 @@ class PromotionsSingleton
     static let shared = PromotionsSingleton()
     
     var possiblePromos = [Promo]()
+    var promotionsTriggered = false
+    
     
     let promos:[Promo] =
         [Promo(image: UIImage(named:"Baby")!, title: "Expecting?", description: "Your new baby is on its way. Open the baby savings account and prepare for a bright future!", type: .newbaby),
@@ -23,6 +25,11 @@ class PromotionsSingleton
     ]
     
     func lookForPossiblePromos(promo type: PromoType) {
+        
+        if !self.promotionsTriggered {
+            print("could not load promotions")
+            return
+        }
         
         let matchingPromos = self.promos.filter({$0.type == type})
         if matchingPromos.count == 0 {

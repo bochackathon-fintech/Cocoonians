@@ -31,7 +31,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         
         self.tabBarController?.navigationItem.title = "Account"
         
-        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"bell"), style: .done, target: nil, action: nil)
         
         Account.fetchAccounts { (succes, accounts) in
             DispatchQueue.main.async {
