@@ -11,7 +11,7 @@ import Alamofire
 
 extension Transaction {
     //http://127.0.0.1:8000/api/my/transactions?account_id=1&start_date=01-01-2017&end_date=30-01-2017
-    class func fetchTransactions()
+    class func fetchTransactions(onCompletion: @escaping (_ success: Bool) -> Void)
     {
         guard let headers = Feeds.headers else {
             return
@@ -28,7 +28,10 @@ extension Transaction {
                             print("--> \(trans.descr)")
                         }
                     })
+                    onCompletion(true)
+                    return
                 }
+                onCompletion(false)
             }
         }
         

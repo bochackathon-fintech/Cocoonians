@@ -37,7 +37,7 @@
 		5819B0951EEC772F00EE8F32 /* Transaction+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5819B0941EEC772F00EE8F32 /* Transaction+Parse.swift */; };
 		5834E1D71EEC69680085E207 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E1D51EEC69680085E207 /* TransactionTableViewCell.swift */; };
 		5834E1D81EEC69680085E207 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5834E1D61EEC69680085E207 /* TransactionTableViewCell.xib */; };
-		5834E1DA1EEC6D0B0085E207 /* PromotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E1D91EEC6D0B0085E207 /* PromotionsViewController.swift */; };
+		5834E1DA1EEC6D0B0085E207 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E1D91EEC6D0B0085E207 /* TransactionsViewController.swift */; };
 		58FCEF541EEBFD8C00EF676D /* Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCEF531EEBFD8C00EF676D /* Feeds.swift */; };
 		58FCEF561EEC107900EF676D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCEF551EEC107900EF676D /* Keys.swift */; };
 		58FCEF591EEC174300EF676D /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCEF581EEC174300EF676D /* UserDefault.swift */; };
@@ -79,7 +79,7 @@
 		5819B0941EEC772F00EE8F32 /* Transaction+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+Parse.swift"; sourceTree = "<group>"; };
 		5834E1D51EEC69680085E207 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		5834E1D61EEC69680085E207 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
-		5834E1D91EEC6D0B0085E207 /* PromotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsViewController.swift; sourceTree = "<group>"; };
+		5834E1D91EEC6D0B0085E207 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		58FCEF531EEBFD8C00EF676D /* Feeds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feeds.swift; sourceTree = "<group>"; };
 		58FCEF551EEC107900EF676D /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		58FCEF581EEC174300EF676D /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				5808751F1EEBE4CA008FFDBE /* AppDelegate.swift */,
 				580875211EEBE4CA008FFDBE /* BakiraTabBarController.swift */,
 				580875341EEBE89D008FFDBE /* LoginViewController.swift */,
-				5834E1D91EEC6D0B0085E207 /* PromotionsViewController.swift */,
+				5834E1D91EEC6D0B0085E207 /* TransactionsViewController.swift */,
 				39D4E9611EEC5DD500F6B900 /* DashboardViewController.swift */,
 				39C81E611EECA107005E7546 /* SnapShotDateAxisValueFormatter.swift */,
 				580875231EEBE4CA008FFDBE /* Main.storyboard */,
@@ -366,7 +366,7 @@
 				5834E1D71EEC69680085E207 /* TransactionTableViewCell.swift in Sources */,
 				39D4E9501EEC535000F6B900 /* Currency+CoreDataProperties.swift in Sources */,
 				580875221EEBE4CA008FFDBE /* BakiraTabBarController.swift in Sources */,
-				5834E1DA1EEC6D0B0085E207 /* PromotionsViewController.swift in Sources */,
+				5834E1DA1EEC6D0B0085E207 /* TransactionsViewController.swift in Sources */,
 				39D4E9541EEC535000F6B900 /* Account+CoreDataProperties.swift in Sources */,
 				39D4E94F1EEC535000F6B900 /* Currency+CoreDataClass.swift in Sources */,
 				39D4E9561EEC535000F6B900 /* AccountCategory+CoreDataProperties.swift in Sources */,
